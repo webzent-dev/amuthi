@@ -29,12 +29,6 @@ const values = [
   },
 ];
 
-const team = [
-  { name: "Founder & CEO", role: "Visionary behind Amuthi's integrated approach to business tools." },
-  { name: "Head of Product", role: "Crafting seamless experiences for creators and businesses." },
-  { name: "Lead Engineer", role: "Building robust, scalable solutions that just work." },
-  { name: "Customer Success", role: "Ensuring every user achieves their business goals." },
-];
 
 const About = () => {
   const [showLeadForm, setShowLeadForm] = useState(false);
@@ -82,7 +76,7 @@ const About = () => {
                 <h2 className="text-4xl font-bold text-foreground mb-6">Our Story</h2>
                 <div className="space-y-4 text-muted-foreground text-lg">
                   <p>
-                    In 2024, we noticed something broken. Freelancers and small business owners were spending more time managing their digital tools than actually running their businesses.
+                    In 2025, we noticed something broken. Freelancers and small business owners were spending more time managing their digital tools than actually running their businesses.
                   </p>
                   <p>
                     Link-in-bio tools here, scheduling software there, QR code generators somewhere else, and lead capture forms on yet another platform. The fragmentation was exhausting.
@@ -104,7 +98,7 @@ const About = () => {
                   />
                 </div>
                 <div className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground px-6 py-4 rounded-2xl font-bold">
-                  Est. 2024
+                  Est. December 2025
                 </div>
               </div>
             </div>
@@ -131,27 +125,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Team Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-foreground mb-4">The Team</h2>
-              <p className="text-muted-foreground text-lg">Passionate people building powerful tools.</p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {team.map((member, index) => (
-                <div key={index} className="text-center p-6">
-                  <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary/30 to-accent/30 mx-auto mb-6 flex items-center justify-center">
-                    <span className="text-4xl font-bold text-foreground">{member.name.charAt(0)}</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-foreground mb-2">{member.name}</h3>
-                  <p className="text-muted-foreground text-sm">{member.role}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-br from-primary/10 to-accent/10">
