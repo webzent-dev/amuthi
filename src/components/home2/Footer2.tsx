@@ -1,10 +1,31 @@
-import { Github, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Github, Twitter, Linkedin, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const footerLinks = {
-  Product: ["Features", "Pricing", "Integrations", "API"],
-  Company: ["About", "Blog", "Careers", "Contact"],
-  Resources: ["Documentation", "Help Center", "Community", "Status"],
-  Legal: ["Privacy", "Terms", "Security", "Cookies"],
+  Product: [
+    { name: "Features", href: "/features" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Integrations", href: "/features" },
+    { name: "API", href: "/features" },
+  ],
+  Company: [
+    { name: "About", href: "/about" },
+    { name: "Blog", href: "/about" },
+    { name: "Careers", href: "/about" },
+    { name: "Contact", href: "/contact" },
+  ],
+  Resources: [
+    { name: "Documentation", href: "/features" },
+    { name: "Help Center", href: "/contact" },
+    { name: "Community", href: "/about" },
+    { name: "Status", href: "/contact" },
+  ],
+  Legal: [
+    { name: "Privacy", href: "/about" },
+    { name: "Terms", href: "/about" },
+    { name: "Security", href: "/about" },
+    { name: "Cookies", href: "/about" },
+  ],
 };
 
 const socialLinks = [
@@ -19,7 +40,6 @@ const Footer2 = () => {
     <footer className="py-20 border-t border-border bg-card/50">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8 mb-16">
-          {/* Brand column */}
           <div className="col-span-2">
             <span className="font-display font-extrabold text-2xl tracking-tight mb-4 block">
               <span className="text-primary">a</span>
@@ -29,7 +49,22 @@ const Footer2 = () => {
               Your complete business toolkit. Smart links, scheduling, QR codes, and more.
             </p>
             
-            {/* Social links */}
+            {/* Contact Info */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center gap-2 text-muted-foreground text-sm">
+                <Phone className="w-4 h-4 text-primary" />
+                <span>+91 9901402896 / 8284854030</span>
+              </div>
+              <div className="flex items-center gap-2 text-muted-foreground text-sm">
+                <Mail className="w-4 h-4 text-primary" />
+                <a href="mailto:info@amuthi.com" className="hover:text-foreground transition-colors">info@amuthi.com</a>
+              </div>
+              <div className="flex items-start gap-2 text-muted-foreground text-sm">
+                <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                <span>43, JB Road, Silpukhuri, Guwahati, Assam 781003</span>
+              </div>
+            </div>
+            
             <div className="flex gap-3">
               {socialLinks.map((social) => (
                 <a
@@ -44,19 +79,18 @@ const Footer2 = () => {
             </div>
           </div>
 
-          {/* Link columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
               <h4 className="font-semibold text-foreground mb-4">{category}</h4>
               <ul className="space-y-3">
                 {links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
                       className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                     >
-                      {link}
-                    </a>
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -64,10 +98,9 @@ const Footer2 = () => {
           ))}
         </div>
 
-        {/* Bottom bar */}
         <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2025 Amuthi. All rights reserved.
+            © 2026 Amuthi. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
             Made with 💜 for creators everywhere
