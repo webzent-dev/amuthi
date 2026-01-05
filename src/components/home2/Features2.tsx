@@ -1,4 +1,4 @@
-import { Link2, QrCode, Calendar, CreditCard, Users, BarChart3, Smartphone } from "lucide-react";
+import { Link2, QrCode, Calendar, CreditCard, Users, Smartphone, Receipt, Star, Share2, Image, FileText, MessageSquare } from "lucide-react";
 
 const features = [
   {
@@ -37,17 +37,52 @@ const features = [
     size: "small",
   },
   {
-    icon: BarChart3,
-    title: "Analytics",
-    description: "Deep insights",
+    icon: Receipt,
+    title: "Invoice & Payments",
+    description: "Get paid faster",
     color: "accent",
+    size: "small",
+  },
+  {
+    icon: Star,
+    title: "Review Collection",
+    description: "Build social proof",
+    color: "primary",
+    size: "small",
+  },
+  {
+    icon: Share2,
+    title: "Social Scheduler",
+    description: "Plan your content",
+    color: "accent",
+    size: "small",
+  },
+  {
+    icon: Image,
+    title: "Portfolio Gallery",
+    description: "Showcase your work",
+    color: "primary",
+    size: "small",
+  },
+  {
+    icon: FileText,
+    title: "Proposals & Quotes",
+    description: "Win more clients",
+    color: "accent",
+    size: "small",
+  },
+  {
+    icon: MessageSquare,
+    title: "Chat Integration",
+    description: "WhatsApp & more",
+    color: "primary",
     size: "small",
   },
   {
     icon: Smartphone,
     title: "Mobile First",
     description: "PWA ready",
-    color: "primary",
+    color: "accent",
     size: "small",
   },
 ];
@@ -71,7 +106,7 @@ const Features2 = () => {
           </div>
           <div className="lg:col-span-5 lg:col-start-8 flex items-end">
             <p className="text-lg text-muted-foreground border-l-2 border-primary/50 pl-6">
-              Seven powerful tools, one unified platform. No more juggling subscriptions or wrestling with integrations.
+              All your essential business tools, unified on one platform with a powerful analytics dashboard at the center.
             </p>
           </div>
         </div>
@@ -92,12 +127,12 @@ const Features2 = () => {
                 </p>
                 
                 {/* Mini preview */}
-                <div className="flex gap-4">
+                <div className="flex flex-wrap gap-3">
                   <div className="px-4 py-2 rounded-full bg-primary/20 text-primary text-sm font-medium">
                     Custom domains
                   </div>
                   <div className="px-4 py-2 rounded-full bg-primary/20 text-primary text-sm font-medium">
-                    Analytics
+                    Click tracking
                   </div>
                   <div className="px-4 py-2 rounded-full bg-primary/20 text-primary text-sm font-medium">
                     A/B Testing
@@ -124,7 +159,7 @@ const Features2 = () => {
             </div>
           </div>
 
-          {/* Small feature cards row */}
+          {/* First row of small feature cards */}
           <div className="col-span-6 md:col-span-3 group">
             <div className="h-full p-5 rounded-2xl bg-card border border-border hover:border-accent/40 transition-all duration-500">
               <CreditCard className="w-8 h-8 text-accent mb-3" strokeWidth={1.5} />
@@ -143,19 +178,59 @@ const Features2 = () => {
 
           <div className="col-span-6 md:col-span-3 group">
             <div className="h-full p-5 rounded-2xl bg-card border border-border hover:border-accent/40 transition-all duration-500">
-              <BarChart3 className="w-8 h-8 text-accent mb-3" strokeWidth={1.5} />
-              <h3 className="text-lg font-bold text-foreground">Analytics</h3>
-              <p className="text-sm text-muted-foreground mt-1">Deep insights</p>
+              <Receipt className="w-8 h-8 text-accent mb-3" strokeWidth={1.5} />
+              <h3 className="text-lg font-bold text-foreground">Invoicing</h3>
+              <p className="text-sm text-muted-foreground mt-1">Get paid faster</p>
             </div>
           </div>
 
           <div className="col-span-6 md:col-span-3 group">
             <div className="h-full p-5 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 border border-border hover:border-primary/40 transition-all duration-500">
-              <Smartphone className="w-8 h-8 text-primary mb-3" strokeWidth={1.5} />
-              <h3 className="text-lg font-bold text-foreground">Mobile First</h3>
-              <p className="text-sm text-muted-foreground mt-1">PWA ready</p>
+              <Star className="w-8 h-8 text-primary mb-3" strokeWidth={1.5} />
+              <h3 className="text-lg font-bold text-foreground">Reviews</h3>
+              <p className="text-sm text-muted-foreground mt-1">Build trust</p>
             </div>
           </div>
+
+          {/* Second row of small feature cards */}
+          <div className="col-span-6 md:col-span-3 group">
+            <div className="h-full p-5 rounded-2xl bg-card border border-border hover:border-accent/40 transition-all duration-500">
+              <Share2 className="w-8 h-8 text-accent mb-3" strokeWidth={1.5} />
+              <h3 className="text-lg font-bold text-foreground">Social Posts</h3>
+              <p className="text-sm text-muted-foreground mt-1">Schedule ahead</p>
+            </div>
+          </div>
+
+          <div className="col-span-6 md:col-span-3 group">
+            <div className="h-full p-5 rounded-2xl bg-card border border-border hover:border-primary/40 transition-all duration-500">
+              <Image className="w-8 h-8 text-primary mb-3" strokeWidth={1.5} />
+              <h3 className="text-lg font-bold text-foreground">Portfolio</h3>
+              <p className="text-sm text-muted-foreground mt-1">Showcase work</p>
+            </div>
+          </div>
+
+          <div className="col-span-6 md:col-span-3 group">
+            <div className="h-full p-5 rounded-2xl bg-card border border-border hover:border-accent/40 transition-all duration-500">
+              <FileText className="w-8 h-8 text-accent mb-3" strokeWidth={1.5} />
+              <h3 className="text-lg font-bold text-foreground">Proposals</h3>
+              <p className="text-sm text-muted-foreground mt-1">Win clients</p>
+            </div>
+          </div>
+
+          <div className="col-span-6 md:col-span-3 group">
+            <div className="h-full p-5 rounded-2xl bg-gradient-to-br from-accent/5 to-primary/5 border border-border hover:border-primary/40 transition-all duration-500">
+              <MessageSquare className="w-8 h-8 text-primary mb-3" strokeWidth={1.5} />
+              <h3 className="text-lg font-bold text-foreground">Chat</h3>
+              <p className="text-sm text-muted-foreground mt-1">WhatsApp & more</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Analytics callout */}
+        <div className="mt-12 p-8 rounded-3xl bg-gradient-to-r from-primary/10 via-card to-accent/10 border border-border/50 text-center">
+          <p className="text-lg text-muted-foreground">
+            <span className="text-foreground font-semibold">Unified Analytics Dashboard</span> — Every tool feeds into one powerful command center. Track performance, understand your audience, and make data-driven decisions.
+          </p>
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { Link2, QrCode, Calendar, UserCircle, MessageCircle, BarChart3, FileText } from "lucide-react";
+import { Link2, QrCode, Calendar, UserCircle, MessageCircle, FileText, Receipt, Star, Share2, Image } from "lucide-react";
 
 const features = [
   {
@@ -32,16 +32,34 @@ const features = [
     color: "primary",
   },
   {
+    icon: Receipt,
+    title: "Invoice & Payments",
+    description: "Create professional invoices, accept online payments, and track your income effortlessly.",
+    color: "accent",
+  },
+  {
+    icon: Star,
+    title: "Review Collection",
+    description: "Automatically collect and showcase customer reviews to build trust and credibility.",
+    color: "primary",
+  },
+  {
+    icon: Share2,
+    title: "Social Media Scheduler",
+    description: "Plan and schedule posts across platforms to maintain consistent social presence.",
+    color: "accent",
+  },
+  {
+    icon: Image,
+    title: "Portfolio Gallery",
+    description: "Stunning galleries to showcase your work with download protection and watermarking.",
+    color: "primary",
+  },
+  {
     icon: MessageCircle,
     title: "Chat Integration",
     description: "WhatsApp, Messenger, and Telegram integration for instant customer engagement.",
     color: "accent",
-  },
-  {
-    icon: BarChart3,
-    title: "Analytics & Insights",
-    description: "Track link clicks, QR scans, campaign performance, and lead conversion metrics.",
-    color: "primary",
   },
 ];
 
