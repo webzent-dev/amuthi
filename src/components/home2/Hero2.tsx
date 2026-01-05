@@ -102,7 +102,7 @@ const Hero2 = () => {
                 </div>
               </div>
               <div className="absolute -left-4 top-1/2 bg-accent text-accent-foreground px-4 py-2 rounded-full font-bold text-sm shadow-glow-accent z-10">
-                ✨ 7 tools in 1
+                ✨ All-in-one platform
               </div>
             </div>
           </div>

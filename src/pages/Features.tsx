@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer2 from "@/components/home2/Footer2";
 import { Button } from "@/components/ui/button";
-import { Link2, QrCode, Calendar, CreditCard, Users, BarChart3, Smartphone, ArrowRight, Check } from "lucide-react";
+import { Link2, QrCode, Calendar, CreditCard, Users, Smartphone, ArrowRight, Check, Receipt, Star, Share2, Image, FileText, MessageSquare, BarChart3 } from "lucide-react";
 import { useState } from "react";
 import { LeadFormDialog } from "@/components/LeadFormDialog";
 
@@ -53,13 +53,58 @@ const features = [
     color: "primary",
   },
   {
-    icon: BarChart3,
-    title: "Analytics Dashboard",
-    subtitle: "Data-driven decisions",
-    description: "Understand your audience with detailed analytics across all tools. See what's working and optimize for growth.",
-    benefits: ["Real-time data", "Geographic insights", "Device breakdown", "Conversion tracking", "Custom reports"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+    icon: Receipt,
+    title: "Invoice & Payments",
+    subtitle: "Get paid faster",
+    description: "Create professional invoices, accept payments online, and track your income. Integrate with popular payment gateways.",
+    benefits: ["Professional templates", "Online payments", "Payment reminders", "Tax calculations", "Payment tracking"],
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop",
     color: "accent",
+  },
+  {
+    icon: Star,
+    title: "Review Collection",
+    subtitle: "Build social proof",
+    description: "Automatically collect and showcase customer reviews. Boost trust and credibility with testimonials from happy clients.",
+    benefits: ["Auto-request reviews", "Multi-platform", "Review widgets", "Response management", "Star ratings"],
+    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=600&fit=crop",
+    color: "primary",
+  },
+  {
+    icon: Share2,
+    title: "Social Media Scheduler",
+    subtitle: "Plan your content",
+    description: "Schedule posts across multiple platforms. Plan your content calendar and maintain consistent social presence.",
+    benefits: ["Multi-platform", "Content calendar", "Auto-publishing", "Best time suggestions", "Hashtag manager"],
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
+    color: "accent",
+  },
+  {
+    icon: Image,
+    title: "Portfolio Gallery",
+    subtitle: "Showcase your work",
+    description: "Create stunning galleries to display your projects. Perfect for photographers, designers, and creative professionals.",
+    benefits: ["Beautiful layouts", "Client galleries", "Download protection", "Watermarking", "Lightbox view"],
+    image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=600&fit=crop",
+    color: "primary",
+  },
+  {
+    icon: FileText,
+    title: "Proposals & Quotes",
+    subtitle: "Win more clients",
+    description: "Create professional proposals and quotes that impress. Track views, get e-signatures, and close deals faster.",
+    benefits: ["Professional templates", "E-signatures", "View tracking", "Auto follow-ups", "Convert to invoice"],
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop",
+    color: "accent",
+  },
+  {
+    icon: MessageSquare,
+    title: "Chat Integration",
+    subtitle: "Connect instantly",
+    description: "Integrate WhatsApp, Messenger, and other chat platforms. Let customers reach you through their preferred channels.",
+    benefits: ["WhatsApp Business", "Facebook Messenger", "Telegram", "Quick replies", "Chat widgets"],
+    image: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=800&h=600&fit=crop",
+    color: "primary",
   },
 ];
 
@@ -72,7 +117,7 @@ const Features = () => {
         <title>Features - Amuthi | Complete Business Toolkit</title>
         <meta 
           name="description" 
-          content="Explore Amuthi's powerful features: Smart Links, QR Codes, Scheduling, Digital Business Cards, Lead Capture, and Analytics. Everything you need in one platform."
+          content="Explore Amuthi's powerful features: Smart Links, QR Codes, Scheduling, Digital Business Cards, Lead Capture, Invoicing, Reviews, and more. Everything you need in one platform."
         />
       </Helmet>
       
@@ -86,14 +131,14 @@ const Features = () => {
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-accent font-semibold tracking-wide uppercase mb-4">Features</p>
               <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
-                <span className="text-foreground">Seven tools</span>
+                <span className="text-foreground">Everything you need</span>
                 <span className="text-primary">,</span>
                 <br />
                 <span className="text-accent italic font-medium">one platform</span>
                 <span className="text-muted-foreground font-light">.</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12">
-                Stop juggling subscriptions. Everything you need to grow your business, beautifully integrated.
+                Stop juggling subscriptions. Every tool you need to grow your business, beautifully integrated with a unified analytics dashboard.
               </p>
               <Button 
                 size="lg" 
@@ -103,6 +148,24 @@ const Features = () => {
                 Start Free Trial
                 <ArrowRight className="ml-2" />
               </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Analytics Highlight */}
+        <section className="py-16 bg-card/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-6">
+                <BarChart3 className="w-6 h-6 text-primary" />
+                <span className="text-lg font-semibold text-primary">Unified Analytics Dashboard</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Your command center for everything
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Every tool feeds into one powerful analytics dashboard. Track link clicks, QR scans, bookings, leads, payments, and more — all in one place. Make data-driven decisions and understand your business like never before.
+              </p>
             </div>
           </div>
         </section>
