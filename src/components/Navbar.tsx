@@ -10,7 +10,7 @@ const Navbar = () => {
   const [showLeadForm, setShowLeadForm] = useState(false);
 
   const navLinks = [
-    { name: "Features", href: "/features" },
+    { name: "Explore Apps", href: "/features" },
     { name: "Pricing", href: "/pricing" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
